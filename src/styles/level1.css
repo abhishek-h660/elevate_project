@@ -1,0 +1,8 @@
+.topmost{
+    display: grid;
+    grid-column-start: 2;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgba(12, 12, 12, 0.945);
+    color: aliceblue;
+    padding-left: 8vw;
+}
