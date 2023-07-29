@@ -37,6 +37,13 @@
     height: fit-content;
 }
 
+.category .content{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
 
 .searchbar {
     display: grid;
