@@ -4,7 +4,7 @@
     background-image: url('./../../public/background1.jpeg');
     background-size: cover;
     background-position: 0% 45%;
-    padding-bottom: 8vh;
+    height: 70vh;
 }
 
 .company {
@@ -37,7 +37,7 @@
   
   .slider-content {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
     max-width: 400px;
     width: 80%;
