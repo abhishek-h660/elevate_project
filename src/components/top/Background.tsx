@@ -1,7 +1,6 @@
 import Level1 from "./level1";
-import './../../styles/background.css'
+import '../../styles/background.css'
 import TaskBar from "./TaskBar";
-import Slider from "./Slider";
 
 const Background = () => {
     return(
@@ -9,7 +8,6 @@ const Background = () => {
             <Level1 />
             <div className="company">Elevate</div>
             <TaskBar />
-            <Slider />
             <div></div>
         </div>
     )

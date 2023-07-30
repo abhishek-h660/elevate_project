@@ -1,8 +1,8 @@
 import { ReactComponentElement, useContext, useEffect, useState } from "react";    
-import './../../styles/products.css'
+import '../../styles/products.css'
 import ProductCard from "./ProductCard";
 import { Product, Item } from "../../types/types";
-import {CategoryContext, SearchContext, DatabaseContext} from './../../App'
+import {CategoryContext, SearchContext, DatabaseContext} from '../../App'
 import { JsxElement } from "typescript";
 import { title } from "process";
 

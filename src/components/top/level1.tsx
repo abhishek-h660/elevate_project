@@ -1,23 +1,27 @@
-import './../../styles/level1.css'
+import '../../styles/level1.css'
 
 const Level1 = () => {
     return(
-        <div className="topmost">
-            <div>
-                Best Sellers
+        <div className="topmost-container">
+            <span className="left"></span>
+            <div className="topmost">
+                <div>
+                    Best Sellers
+                </div>
+                <div>
+                    Gift Ideas
+                </div>
+                <div>
+                    New Release
+                </div>
+                    <div>
+                    Today's Deal
+                </div>
+                <div>
+                    Customer Service
+                </div>
             </div>
-            <div>
-                Gift Ideas
-            </div>
-            <div>
-                New Release
-            </div>
-            <div>
-                Today's Deal
-            </div>
-            <div>
-                Customer Service
-            </div>
+            <span className="right"></span>
         </div>
     )
 }

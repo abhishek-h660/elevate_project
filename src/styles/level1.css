@@ -1,8 +1,33 @@
+.topmost-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.topmost-container .left{
+    background:#333;
+    width: 50px;
+    height: 50px;
+    transform: skewX(20deg) translateX(20px);
+}
+.topmost-container .right{
+    background:#333;
+    width: 50px;
+    height: 50px;
+    transform: skewX(-20deg) translateX(-20px);
+}
+
 .topmost{
-    display: grid;
-    grid-column-start: 2;
-    grid-template-columns: repeat(6, 1fr);
-    background-color: rgba(12, 12, 12, 0.945);
-    color: aliceblue;
-    padding-left: 8vw;
+    width: 100%;
+    max-width: 900px;
+    height: 50px;
+    background:#333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.topmost div {
+    padding:0.5rem 1rem;
 }

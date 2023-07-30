@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import './../../styles/taskbar.css'
+import '../../styles/taskbar.css'
 import { CategoryContext, SearchContext, DatabaseContext } from '../../App';
 import { Item } from '../../types/types';
 const TaskBar = () => {
@@ -31,6 +31,7 @@ const TaskBar = () => {
     }
 
     return(
+        <div className="taskbar-container">
         <div className="taskbar">
             <div className="menu_icon">
                 <img src='/icons/menu_icon.svg' />
@@ -50,7 +51,9 @@ const TaskBar = () => {
             </div>
             <div className='searchbar'>
                 <input type='text' name='search' value={input} onChange={(e)=>{handleSearch(e)}} placeholder='Search this blog'/>
-                <img src='./icons/search_icon.svg'/>
+                <div className="search-icon">
+                    <img src='./icons/search_icon.svg'/>
+                </div>
             </div>
             <div className='language'>
                 <div className='text'>English</div> 
@@ -64,6 +67,7 @@ const TaskBar = () => {
                 <img src='./icons/profile_icon.svg'/>
                 <div>Profile</div>
             </div>
+        </div>
         </div>
     )
 }

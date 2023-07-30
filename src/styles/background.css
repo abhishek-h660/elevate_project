@@ -1,16 +1,17 @@
 .background {
     background-color: rgb(196, 134, 20);
-    display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 1.5fr repeat(9, 1fr);
     row-gap: 1vh;
     background-image: url('./../../public/background1.jpeg');
     background-size: cover;
-    background-position: 0% 40%;
+    background-position: 0% 45%;
     height: 60vh;
 }
+
+
 .company {
     grid-column-start: 2;
     color: white;
     font-size: 2rem;
+    font-weight:600;
+    margin: 10px 0;
 }
