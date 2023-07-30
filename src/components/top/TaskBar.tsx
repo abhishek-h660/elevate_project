@@ -1,9 +1,13 @@
 import { useContext, useState } from 'react';
 import './../../styles/taskbar.css'
-import { CategoryContext } from '../../App';
+import { CategoryContext, SearchContext, DatabaseContext } from '../../App';
+import { Item } from '../../types/types';
 const TaskBar = () => {
     const {category, setCategory} = useContext(CategoryContext)
     const [display, setDisplay] = useState({display:"none"})
+    const {input, setInput} = useContext(SearchContext)
+    const {product, setProducts} = useContext(DatabaseContext)
+    
 
     const handleOption = (value: string)=>{
         if(display.display == "none"){
@@ -12,6 +16,10 @@ const TaskBar = () => {
             setDisplay({display:"none"});
         }
         setCategory(value)
+    }
+
+    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setInput(event.target.value.toLowerCase())
     }
 
     const handleToggle = (e:React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -41,7 +49,7 @@ const TaskBar = () => {
                 </div>
             </div>
             <div className='searchbar'>
-                <input type='text' name='search' placeholder='Search this blog'/>
+                <input type='text' name='search' value={input} onChange={(e)=>{handleSearch(e)}} placeholder='Search this blog'/>
                 <img src='./icons/search_icon.svg'/>
             </div>
             <div className='language'>
