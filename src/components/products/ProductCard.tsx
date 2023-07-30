@@ -1,18 +1,24 @@
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import ReactDOM from 'react-dom';
-import '../../styles/products.css'
+import '../../styles/products.css';
 import { Product } from '../../types/types';
+import { CartDatabaseContext } from '../../App';
 const ProductCard = (props:any) => {
     const [popup, setPopup] = useState(false)
     const openPopup=(id: string)=>{
-        //console.log("Clicked ", id)
         setPopup(!popup)
     }
     
-
+    const {cartDB, setCartDB} = useContext(CartDatabaseContext)
     const handleAddToCart = (product: Product) => {
+        const newDB = cartDB
+        newDB.push(product)
+        setCartDB(newDB)
+        console.log(cartDB)
+        //
         const reqBody = {
             "userId":101,
+            "date": new Date(),
             "products":[{
                 "productId":product._id,
                 "quantity":1

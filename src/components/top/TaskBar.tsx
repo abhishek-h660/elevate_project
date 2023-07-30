@@ -2,12 +2,19 @@ import { useContext, useState } from 'react';
 import '../../styles/taskbar.css'
 import { CategoryContext, SearchContext, DatabaseContext } from '../../App';
 import { Item } from '../../types/types';
+import { CartContext } from '../../App';
 const TaskBar = () => {
     const {category, setCategory} = useContext(CategoryContext)
     const [display, setDisplay] = useState({display:"none"})
     const {input, setInput} = useContext(SearchContext)
     const {product, setProducts} = useContext(DatabaseContext)
+    const {cartPopup, setCartPopup} = useContext(CartContext)
     
+
+    const handleCart = () => {
+        console.log("clicked", cartPopup)
+        setCartPopup(!cartPopup)
+    }
 
     const handleOption = (value: string)=>{
         if(display.display == "none"){
@@ -59,7 +66,7 @@ const TaskBar = () => {
                 <div className='text'>English</div> 
                 <img src='/icons/dropdown_icon.svg'/>
             </div>
-            <div className='cart-section'>
+            <div className='cart-section' onClick={handleCart}>
                 <img src='./icons/cart_icon.svg'/>
                 <div>CART</div>
             </div>
