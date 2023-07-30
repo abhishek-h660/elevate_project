@@ -59,7 +59,7 @@ const ProductCard = (props:any) => {
                             <img src={props.image} alt="unable to render"/>
                             <div className='product-popup-text-part'>
                                 <div>{props.name}</div>
-                                <div>Price: ₹{props.price}</div>
+                                <div>Price: ${props.price}</div>
                             </div>
                             <button className="product-cta-button" onClick={()=>{handleAddToCart(props)}}> Add To Cart</button>
                         </div>

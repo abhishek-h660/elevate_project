@@ -52,6 +52,7 @@ const Cart = () => {
         <div className="cart-container-outer">
             {cartPopup && ReactDOM.createPortal(
                 <div className="cart-container">
+                    No Items in cart
                         <div className="cart-content" onClick={handleCartClick}>
                             <div className="product-container">
                             {cartItemArray}

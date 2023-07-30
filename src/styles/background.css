@@ -4,9 +4,8 @@
     background-image: url('./../../public/background1.jpeg');
     background-size: cover;
     background-position: 0% 45%;
-    height: 60vh;
+    padding-bottom: 8vh;
 }
-
 
 .company {
     grid-column-start: 2;
@@ -20,7 +19,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 75px 0;
+    margin: 50px 0;
+    overflow: hidden;
   }
   
   .slider-button {
@@ -37,7 +37,7 @@
   
   .slider-content {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     max-width: 400px;
     width: 80%;

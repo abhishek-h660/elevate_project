@@ -32,14 +32,13 @@ const Background = () => {
             <Level1 />
             <div className="company">Elevate</div>
             <TaskBar />
-            <div></div>
             <div className="slider">
                 <button onClick={prevSlide} className="slider-button">&lt;</button>
                 <div className="slider-content">
                     {Taglines[tagline]}
                 </div>
-            <button onClick={nextSlide} className="slider-button">&gt;</button>
-      </div>
+                <button onClick={nextSlide} className="slider-button">&gt;</button>
+            </div>
         </div>
     )
 }
